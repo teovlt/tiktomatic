@@ -1,6 +1,12 @@
 from downloader import download_youtube_video
+from video_splitter import split_video
 
 if __name__ == "__main__":
-    url = input("Entrez votre vidéo youtube  : ")
-    path = download_youtube_video(url)
-    print(f"✅ Vidéo téléchargée : {path}")
+    url = input("Colle le lien YouTube ici : ")
+    video_path = download_youtube_video(url)
+    print(f"✅ Vidéo téléchargée : {video_path}")
+
+    clips = split_video(video_path)
+    print(f"✅ Vidéo découpée en {len(clips)} clips:")
+    for clip in clips:
+        print(" -", clip)
