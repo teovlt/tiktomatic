@@ -13,6 +13,7 @@ develop-eggs/
 dist/
 downloads/
 clips/
+tiktok_clips/
 eggs/
 .eggs/
 lib/
