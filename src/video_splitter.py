@@ -20,7 +20,7 @@ def split_video(input_path, output_dir="clips", chunk_duration=60):
         actual_chunk_duration = min(chunk_duration, duration - start_time)
 
         # Traiter le chunk uniquement si sa durée est de 30 secondes ou plus
-        if actual_chunk_duration >= 30:
+        if actual_chunk_duration >=10:
             (
                 ffmpeg
                 .input(input_path, ss=start_time, t=actual_chunk_duration)
